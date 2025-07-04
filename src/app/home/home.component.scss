@@ -12,3 +12,152 @@
  height: 200px;
  width: 350px;
 }
+
+@media (max-width: 767.5px) {
+.about-me{
+  display: none;
+}
+.experience-text{
+  display: none;
+}
+}
+
+
+.bg-pic
+{
+  background-image: url(../../assets/images/bg.png);
+}
+
+.nav-items, .text {
+  color: white;
+}
+
+.text1{
+  color: white;
+}
+
+.mute-text
+{
+  color: rgb(215, 215, 215);
+}
+
+
+/* Fade-in elements smoothly */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typing text effect */
+.animate-typing {
+  overflow: hidden;
+  // border-right: 3px solid #007bff;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+/* Floating profile image */
+.float-in img {
+  animation: floatImage 5s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Button glow on hover */
+.btn-glow:hover {
+  // box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Moving SVG shapes */
+.move-shape img {
+  animation: moveShape 6s ease-in-out infinite alternate;
+}
+@keyframes moveShape {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(15px); }
+}
+
+// Start
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 1.5s ease;
+}
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 1.5s ease;
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s ease;
+}
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 1.5s ease;
+}
+.fade-in-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// $ years
+.experience-section {
+  position: relative;
+  background-color: #111;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-number {
+  font-size: 400px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #c4c4c4 30%, #d4af37 70%);
+  -webkit-background-clip: text;
+  font-family: 'Times New Roman', ;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.experience-text {
+  position: absolute;
+  left: 19rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  z-index: 2;
+}
+

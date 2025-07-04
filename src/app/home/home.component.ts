@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { Form } from '../model/form';
 import { FormdataService } from '../services/formdata.service';
+import { NotificationService } from '../services/notification.service';
+
 FormdataService
 Form
 
@@ -35,7 +37,7 @@ export class HomeComponent implements OnInit {
   isMenuClosed = true;
 
 
-  constructor(private fb: FormBuilder, private sc: FormdataService) {
+  constructor(private fb: FormBuilder, private sc: FormdataService, private ns: NotificationService) {
     this.contactForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
@@ -45,10 +47,37 @@ export class HomeComponent implements OnInit {
 );}
 
   ngOnInit(): void {
+
   }
 toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  ngAfterViewInit() {
+  // fade-in-observer.ts
+document.addEventListener('DOMContentLoaded', () => {
+  const observer: IntersectionObserver = new IntersectionObserver(
+    (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+          observer.unobserve(entry.target); // fire once
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  const animatedElements: NodeListOf<HTMLElement> = document.querySelectorAll(
+    '.fade-in-left, .fade-in-right, .fade-in-up, .fade-in-down'
+  );
+
+  animatedElements.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+}
 
 
   // Form submission
@@ -69,12 +98,14 @@ toggleMenu() {
       this.contactForm.markAsPristine();
       this.contactForm.markAsUntouched();
 
+       this.ns.showNotification('Message Sent!', 'success');
 
       // console.log('Feedback Received:', this.contactForm.value);
       // Process the form data
     } else {
 
       this.contactForm.markAllAsTouched();
+        this.ns.showNotification('Kindly fill all vali fields', 'error');
       // Mark all controls as touched to trigger validation
     }
   }
