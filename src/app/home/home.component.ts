@@ -56,7 +56,6 @@ toggleMenu() {
   ngAfterViewInit() {
 
 
-
   // fade-in-observer.ts
 document.addEventListener('DOMContentLoaded', () => {
   const observer: IntersectionObserver = new IntersectionObserver(
