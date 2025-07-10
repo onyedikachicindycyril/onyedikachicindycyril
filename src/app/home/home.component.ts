@@ -54,17 +54,7 @@ toggleMenu() {
   }
 
   ngAfterViewInit() {
-     const navLinks = document.querySelectorAll('.nav-link');
-  const navbarCollapse = document.getElementById('navbarSupportedContent');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navbarCollapse?.classList.contains('show')) {
-        // Collapse the navbar
-        (document.querySelector('.navbar-toggler') as HTMLElement)?.click();
-      }
-    });
-  });
 
 
   // fade-in-observer.ts
