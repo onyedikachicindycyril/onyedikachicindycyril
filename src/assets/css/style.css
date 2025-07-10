@@ -1990,8 +1990,8 @@ a.text-gradient-light-100:hover, a.text-gradient-light-100:focus {
   left: 0;
   opacity: 0;
   z-index: 1;
-  /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-25%, #ebb884), to(#161c2d)) !important;
-  background-image: linear-gradient(#ebb884 -25%, #161c2d) !important; */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-25%, #ebb884), to(#161c2d)) !important;
+  background-image: linear-gradient(#ebb884 -25%, #161c2d) !important;
   -webkit-transition: all 1s;
   transition: all 1s;
   position: absolute;
