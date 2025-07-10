@@ -54,6 +54,19 @@ toggleMenu() {
   }
 
   ngAfterViewInit() {
+     const navLinks = document.querySelectorAll('.nav-link');
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse?.classList.contains('show')) {
+        // Collapse the navbar
+        (document.querySelector('.navbar-toggler') as HTMLElement)?.click();
+      }
+    });
+  });
+
+
   // fade-in-observer.ts
 document.addEventListener('DOMContentLoaded', () => {
   const observer: IntersectionObserver = new IntersectionObserver(
@@ -77,6 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+}
+
+closeNavbar(): void {
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const toggler = document.querySelector('.navbar-toggler') as HTMLElement;
+
+  if (navbarCollapse?.classList.contains('show') && toggler) {
+    toggler.click();
+  }
 }
 
 
