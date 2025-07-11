@@ -1,0 +1,7 @@
+# robots.txt
+# Allow all crawlers and direct them to your sitemap
+
+User-agent: *
+Disallow:
+
+Sitemap: https://onyedikachicindycyril.github.io/onyedikachicindycyril/sitemap.xml
