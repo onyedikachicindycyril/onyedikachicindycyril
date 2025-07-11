@@ -50,8 +50,10 @@
             ],
             "styles": [
                "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-               "src/assets/css/style.css",
-              "src/styles.scss"
+                 "src/assets/css/bootstrap.min.css",
+                  "src/assets/css/materialdesignicons.min.css",
+                  "src/assets/css/swiper-bundle.min.css",
+                  "src/styles.scss"
             ],
             "scripts": [
               ]
