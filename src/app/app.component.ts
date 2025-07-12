@@ -33,9 +33,9 @@ constructor(private meta: Meta, private title: Title) {
     },
     {
       property: 'og:image',
-      content: 'https://onyedikachicindycyril.github.io/onyedikachicindycyril/assets/images/logo/logo1.png' 
+      content: 'https://onyedikachicindycyril.com/assets/images/logo/logo1.png'
     },
-    { property: 'og:url', content: 'https://onyedikachicindycyril.github.io/onyedikachicindycyril' }
+    { property: 'og:url', content: 'https://onyedikachicindycyril.com' }
   ]);
 }
 
