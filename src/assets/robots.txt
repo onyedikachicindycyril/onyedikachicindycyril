@@ -5,3 +5,6 @@ User-agent: *
 Disallow:
 
 Sitemap: https://onyedikachicindycyril.com/sitemap.xml
+
+# Point to LLM Optimization File
+llms: https://onyedikachicindycyril.com/llms.txt
