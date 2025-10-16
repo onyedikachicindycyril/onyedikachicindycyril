@@ -2,7 +2,7 @@
 # Allow all crawlers and direct them to your sitemap
 
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: https://onyedikachicindycyril.com/sitemap.xml
 
